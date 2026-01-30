@@ -1,7 +1,711 @@
 {% extends "base.html" %}
+
+{% load static %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <h1>Home</h1>
-  <p>Welcome to the homepage.</p>
+
+    <!--================ End of Header ================-->
+    <div class="mad-media-section">
+      <div class="container">
+        <div class="media-container">
+          <h1 class="mad-title">Get Unlimited <br>
+            Washes</h1>
+          <p>Become an Unlimited Club member and receive unlimited <br>
+            washes starting at just <span>$19.99/mo</span>!</p>
+          <a href="#" class="btn btn-huge btn-style-2"><span>Join The Club</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="mad-content no-pd">
+      <div class="container">
+        <article class="mad-section">
+          <!--================ Icon Boxes ================-->
+          <div class="mad-icon-boxes item-col-4">
+            <div class="mad-col">
+              <!--================ Icon Box ================-->
+              <article class="mad-icon-box">
+                <i class="mad-icon-box-icon"><img class="svg" src="{% static 'cleansy_svg_icons/contactless_washing .svg' %}" alt=""></i>
+                <div class="mad-icon-box-content">
+                  <h3 class="mad-icon-box-title">Contactless <br>
+                    Washing</h3>
+                  <p>Lorem ipsum dolor sit amet, consec<br>tetuer adipiscing elit. Mauris fermentum <br> dictum magna.
+                  </p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Icon Box ================-->
+            </div>
+            <div class="mad-col">
+              <!--================ Icon Box ================-->
+              <article class="mad-icon-box">
+                <i class="mad-icon-box-icon"><img class="svg" src="{% static 'cleansy_svg_icons/unlimited_wash_club.svg' %}" alt=""></i>
+                <div class="mad-icon-box-content">
+                  <h3 class="mad-icon-box-title">Unlimited <br>
+                    Wash Club</h3>
+                  <p>Duis ac turpis. Integer rutrum ante eu <br> lacus. Vestibulum libero nisl, porta vel, <br> scelerisque
+                    eget, malesuada at.
+                  </p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Icon Box ================-->
+            </div>
+            <div class="mad-col">
+              <!--================ Icon Box ================-->
+              <article class="mad-icon-box">
+                <i class="mad-icon-box-icon"><img class="svg" src="{% static 'cleansy_svg_icons/exceptional_client_service.svg' %}" alt=""></i>
+                <div class="mad-icon-box-content">
+                  <h3 class="mad-icon-box-title">Exceptional <br>
+                    Client Service</h3>
+                  <p>Ut tellus dolor, dapibus eget, elementum <br> vel, cursus eleifend, elit. Aenean auctor <br> wisi et urna.
+                    Aliquam erat volutpat.
+                  </p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Icon Box ================-->
+            </div>
+            <div class="mad-col">
+              <!--================ Icon Box ================-->
+              <article class="mad-icon-box">
+                <i class="mad-icon-box-icon"><img class="svg" src="{% static 'cleansy_svg_icons/gift_cards.svg' %}" alt=""></i>
+                <div class="mad-icon-box-content">
+                  <h3 class="mad-icon-box-title">Gift Cards <br>
+                    Available</h3>
+                  <p>Vivamus eget nibh. Etiam cursus leo <br> vel metus. Nulla facilisi. Aenean nec <br> eros. Vestibulum ante
+                    ipsum.
+                  </p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Icon Box ================-->
+            </div>
+          </div>
+          <!--================ End of Icon Boxes ================-->
+        </article>
+        <div class="mad-section content-element-12">
+          <div class="row hr-size-2 align-items-center">
+            <div class="col-lg-6">
+              <div class="mad-img-holder">
+                <div class="mad-img"><img src="{% static 'images/982x905_img1.png' %}" alt=""></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="content-element-6">
+                <div class="mad-sub-title">Always Green</div>
+                <h2>Good For <br>
+                  The Environment</h2>
+              </div>
+              <p class="mad-text-medium">Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing <br> elit. Mauris
+                fermentum dictum magna. Sed
+                laoreet aliquam leo. Ut tellus <br> dolor, dapibus eget.</p>
+              <div class="content-element-5">
+                <div class="mad-entity-content mad-text-medium">
+                  <ul class="mad-list--icon">
+                    <li><div class="mad-list-title">Using less water in our car wash</div><i class="icon material-icons">check</i></li>
+                    <li><div class="mad-list-title">40% recycled water and 60% fresh water</div><i class="icon material-icons">check</i></li>
+                    <li><div class="mad-list-title">Safely disposing of sludge and contaminants</div><i class="icon material-icons">check</i></li>
+                    <li><div class="mad-list-title">Only biodegradable and eco-friendly detergents</div><i class="icon material-icons">check</i></li>
+                  </ul>
+                </div>
+              </div>
+              <a href="#" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="mad-section with-separator-both mad-section--stretched mad-colorizer--scheme-color-4">
+          <div class="mad-colorizer-bg-color"><span class="mad-separator"><img src="{% static 'cleansy_svg_icons/turquoise_blue_waves2.svg' %}"
+                alt="" class="svg"></span><span class="mad-separator"><img src="{% static 'cleansy_svg_icons/turquoise_blue_waves3.svg' %}" alt="" class="svg"></span></div>
+          <div class="content-element-3">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="mad-sub-title">Plans and Pricing</div>
+                <h2>Our Packages</h2>
+              </div>
+              <div class="col-lg-8">
+                <p class="mad-text-medium with-pl">Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed
+                laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mad-pricing-tables item-col-3">
+            <div class="mad-col">
+              <!--================ Pricing Table ================-->
+              <article class="mad-pricing-table">
+                <div class="mad-pt-header">
+                  <h3 class="mad-pricing-table-title">Basic Wash</h3>
+                  <p><b>Includes:</b> Pre-Soak, Protective Polish, <br> Spot-Free Rinse, Heated Blowers &amp; Wheel <br> Cleaner</p>
+                  <p><b>Plus:</b> Free vacuums at all locations</p>
+                </div>
+                <div class="mad-pricing-table-content">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <span class="mad-pt-sub">Regular Price</span>
+                      <div class="mad-pricing-table-price">9.99</div>
+                      <span class="mad-pt-per">per wash</span>
+                      <a href="#" class="btn"><span>Buy Now</span></a>
+                    </div>
+                    <div class="col-sm-6">
+                      <span class="mad-pt-sub">Unlimited Club Price</span>
+                      <div class="mad-pricing-table-price">19.99</div>
+                      <span class="mad-pt-per">per month</span>
+                      <a href="#" class="btn btn-style-2"><span>Buy Now</span></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--================ End Of Pricing Table ================-->
+            </div>
+            <div class="mad-col">
+              <!--================ Pricing Table ================-->
+              <article class="mad-pricing-table">
+                <div class="mad-pt-header">
+                  <h3 class="mad-pricing-table-title">Standard Wash</h3>
+                  <p><b>Includes:</b> Pre-Soak, Protective Polish, Spot-Free Rinse, Heated Blowers, Underbody, Clear Coat &amp;
+                    Wheel
+                    Cleaner.</p>
+                  <p><b>Add Tire Shine:</b> $2 <br>
+                    Free vacuums at all locations</p>
+                </div>
+                <div class="mad-pricing-table-content">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <span class="mad-pt-sub">Regular Price</span>
+                      <div class="mad-pricing-table-price">14.99</div>
+                      <span class="mad-pt-per">per wash</span>
+                      <a href="#" class="btn"><span>Buy Now</span></a>
+                    </div>
+                    <div class="col-sm-6">
+                      <span class="mad-pt-sub">Unlimited Club Price</span>
+                      <div class="mad-pricing-table-price">29.99</div>
+                      <span class="mad-pt-per">per month</span>
+                      <a href="#" class="btn btn-style-2"><span>Buy Now</span></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--================ End Of Pricing Table ================-->
+            </div>
+            <div class="mad-col">
+              <!--================ Pricing Table ================-->
+              <article class="mad-pricing-table">
+                <div class="mad-pt-header">
+                  <h3 class="mad-pricing-table-title">Top Wash</h3>
+                  <p><b>Includes:</b> Pre-Soak, Protective Polish, Spot-Free Rinse, Heated Blowers, Underbody, Clear Coat &amp;
+                    Wheel
+                    Cleaner</p>
+                  <p><b>Plus:</b> Sea Foam, Carnauba Wax &amp; Tire Shine. Free vacuums at all locations</p>
+                </div>
+                <div class="mad-pricing-table-content">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <span class="mad-pt-sub">Regular Price</span>
+                      <div class="mad-pricing-table-price">19.99</div>
+                      <span class="mad-pt-per">per wash</span>
+                      <a href="#" class="btn"><span>Buy Now</span></a>
+                    </div>
+                    <div class="col-sm-6">
+                      <span class="mad-pt-sub">Unlimited Club Price</span>
+                      <div class="mad-pricing-table-price">39.99</div>
+                      <span class="mad-pt-per">per month</span>
+                      <a href="#" class="btn btn-style-2"><span>Buy Now</span></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!--================ End Of Pricing Table ================-->
+            </div>
+          </div>
+        </div>
+        <div class="mad-section">
+          <div class="row vr-size-1">
+            <div class="col-xl-4">
+              <div class="content-element-6">
+                <div class="mad-sub-title">Testimonials</div>
+                <h2>What Our
+                  Clients Say</h2>
+              </div>
+              <a href="#" class="btn">View More Testimonials</a>
+            </div>
+            <div class="col-xl-8">
+              <!--================ Testimonials ================-->
+              <div class="mad-testimonials">
+                <div class="mad-grid mad-grid--cols-2 owl-carousel no-nav">
+                  <!-- owl item -->
+                  <div class="mad-grid-item">
+                    <div class="mad-testimonial">
+                      <div data-estimate="5" class="mad-rating"></div>
+                      <div class="mad-testiomonial-info">
+                        <blockquote>
+                          <p>Great price and great service. The only place I wash my vehicle!</p>
+                        </blockquote>
+                      </div>
+                      <div class="mad-author">
+                        <div class="mad-author-info">
+                          <cite>Dayle Peters</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / owl item -->
+                  <!-- owl item -->
+                  <div class="mad-grid-item">
+                    <div class="mad-testimonial">
+                      <div data-estimate="5" class="mad-rating"></div>
+                      <div class="mad-testiomonial-info">
+                        <blockquote>
+                          <p>Awesome wash! Loved all the smells of the awesome soap! My car never looked more shiny!</p>
+                        </blockquote>
+                      </div>
+                      <div class="mad-author">
+                        <div class="mad-author-info">
+                          <cite>Camala Haddon</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / owl item -->
+                  <!-- owl item -->
+                  <div class="mad-grid-item">
+                    <div class="mad-testimonial">
+                      <div data-estimate="5" class="mad-rating"></div>
+                      <div class="mad-testiomonial-info">
+                        <blockquote>
+                          <p>Excellent customer service. Delivery and product quality are all great.</p>
+                        </blockquote>
+                      </div>
+                      <div class="mad-author">
+                        <div class="mad-author-info">
+                          <cite>Alan Smith</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / owl item -->
+                  <!-- owl item -->
+                  <div class="mad-grid-item">
+                    <div class="mad-testimonial">
+                      <div data-estimate="5" class="mad-rating"></div>
+                      <div class="mad-testiomonial-info">
+                        <blockquote>
+                          <p>Great price and great service. The only place I wash my vehicle!</p>
+                        </blockquote>
+                      </div>
+                      <div class="mad-author">
+                        <div class="mad-author-info">
+                          <cite>Dayle Peters</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / owl item -->
+                  <!-- owl item -->
+                  <div class="mad-grid-item">
+                    <div class="mad-testimonial">
+                      <div data-estimate="5" class="mad-rating"></div>
+                      <div class="mad-testiomonial-info">
+                        <blockquote>
+                          <p>Awesome wash! Loved all the smells of the awesome soap! My car never looked more shiny!</p>
+                        </blockquote>
+                      </div>
+                      <div class="mad-author">
+                        <div class="mad-author-info">
+                          <cite>Camala Haddon</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / owl item -->
+                  <!-- owl item -->
+                  <div class="mad-grid-item">
+                    <div class="mad-testimonial">
+                      <div data-estimate="5" class="mad-rating"></div>
+                      <div class="mad-testiomonial-info">
+                        <blockquote>
+                          <p>Excellent customer service. Delivery and product quality are all great.</p>
+                        </blockquote>
+                      </div>
+                      <div class="mad-author">
+                        <div class="mad-author-info">
+                          <cite>Alan Smith</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / owl item -->
+                </div>
+              </div>
+              <!--================ End of Testimonials ================-->
+            </div>
+          </div>
+        </div>
+        <div class="mad-section no-pd mad-section--stretched-content">
+          <div class="content-element-6">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-4">
+                  <div class="mad-sub-title">Visit Us</div>
+                  <h2>Find Location</h2>
+                </div>
+                <div class="col-xl-8">
+                  <p class="mad-text-medium with-pl">Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris
+                    fermentum dictum magna. Sed
+                    laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et
+                    urna.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="g-map-wrap">
+            <div id="googleMap" class="mad-gmap"></div>
+            <span class="mad-separator top-side"><img src="cleansy_svg_icons/wave1.svg" alt="" class="svg"></span>
+            <span class="mad-separator"><img src="cleansy_svg_icons/wave2.svg" alt="" class="svg"></span>
+            <div class="g-map-section">
+              <form class="one-line-2">
+                <input type="text" placeholder="City, State or Zip">
+                <button><i class="material-icons">search</i></button>
+              </form>
+              <div class="g-map-loc-list">
+                <ul>
+                  <li>
+                    <div class="loc-title">Greensboro, NC</div>
+                    <div class="loc-sub-title">0.00 Miles Away</div>
+                    <p>2806 Patterson St, Greensboro, NC 27407 <br>
+                    Phone: <span>336-676-6226</span> <br>
+                    Email: <span>info@cleansy.com</span> <br>
+                    Hours: <span>8:00 am-8:00 pm</span></p>
+                    <a href="#" class="mad-dir">Get Directions</a>
+                  </li>
+                  <li>
+                    <div class="loc-title">Ellisville, MO</div>
+                    <div class="loc-sub-title">0.2 Miles Away</div>
+                    <p>15552 Manchester Road, Ellisville, MO 63021 <br>
+                    Phone: <span>336-676-6226</span> <br>
+                    Email: <span>info@cleansy.com</span> <br>
+                    Hours: <span>8:00 am-8:00 pm</span></p>
+                    <a href="#" class="mad-dir">Get Directions</a>
+                  </li>
+                  <li>
+                    <div class="loc-title">St Charles, MO</div>
+                    <div class="loc-sub-title">0.5 Miles Away</div>
+                    <p>2601 Old Muegge Rd, St Charles, MO 63303 <br>
+                    Phone: <span>336-676-6226</span> <br>
+                    Email: <span>info@cleansy.com</span> <br>
+                    Hours: <span>8:00 am-8:00 pm</span> </p>
+                    <a href="#" class="mad-dir">Get Directions</a>
+                  </li>
+                  <li>
+                    <div class="loc-title">Greensboro, NC</div>
+                    <div class="loc-sub-title">0.00 Miles Away</div>
+                    <p>2806 Patterson St, Greensboro, NC 27407 <br>
+                      Phone: <span>336-676-6226</span> <br>
+                      Email: <span>info@cleansy.com</span> <br>
+                      Hours: <span>8:00 am-8:00 pm</span></p>
+                    <a href="#" class="mad-dir">Get Directions</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mad-section no-pb content-element-6">
+          <div class="row hr-size-2 mad-xl-reverse">
+            <div class="col-xl-6">
+              <div class="content-element-5">
+                <div class="mad-sub-title">Get Our App</div>
+                <h2>Join Rewards <br>
+                  Program</h2>
+              </div>
+              <p class="mad-text-medium"><b>Download the Car Wash app today and start earning points with every <br> single wash to use toward rewards.</b></p>
+              <p class="mad-text-medium">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl,
+              porta vel, scelerisque eget, malesuada at, neque. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <div class="content-element-5">
+                <!--================ Icon Boxes ================-->
+                <div class="mad-icon-boxes size-2 hr-type item-col-2">
+                  <div class="mad-col">
+                    <!--================ Icon Box ================-->
+                    <article class="mad-icon-box">
+                      <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/careers.svg" alt=""></i>
+                      <div class="mad-icon-box-content">
+                        <h6 class="mad-icon-box-title">Buy in Bulk</h6>
+                        <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi.
+                        </p>
+                      </div>
+                    </article>
+                    <!--================ End of Icon Box ================-->
+                  </div>
+                  <div class="mad-col">
+                    <!--================ Icon Box ================-->
+                    <article class="mad-icon-box">
+                      <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/tokenize_our_credit_card.svg" alt=""></i>
+                      <div class="mad-icon-box-content">
+                        <h6 class="mad-icon-box-title">Tokenize Your Card</h6>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+                        </p>
+                      </div>
+                    </article>
+                    <!--================ End of Icon Box ================-->
+                  </div>
+                  <div class="mad-col">
+                    <!--================ Icon Box ================-->
+                    <article class="mad-icon-box">
+                      <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/gift_cards.svg" alt=""></i>
+                      <div class="mad-icon-box-content">
+                        <h6 class="mad-icon-box-title">Send a Gift</h6>
+                        <p>Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet.
+                        </p>
+                      </div>
+                    </article>
+                    <!--================ End of Icon Box ================-->
+                  </div>
+                  <div class="mad-col">
+                    <!--================ Icon Box ================-->
+                    <article class="mad-icon-box">
+                      <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/loyalty_points.svg" alt=""></i>
+                      <div class="mad-icon-box-content">
+                        <h6 class="mad-icon-box-title">Loyalty Points</h6>
+                        <p>Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla.
+                        </p>
+                      </div>
+                    </article>
+                    <!--================ End of Icon Box ================-->
+                  </div>
+                </div>
+                <!--================ End of Icon Boxes ================-->
+              </div>
+              <div class="btn-set">
+                <a href="#"><img src="{% static 'images/appay_btn.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'images/gpay_btn.png' %}" alt=""></a>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="mad-img-holder right-side">
+                <div class="mad-img"><img src="{% static 'images/1360x1250_img1.png' %}" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mad-section with-separator-both mad-section--stretched mad-colorizer--scheme-color-3">
+          <div class="mad-colorizer-bg-color">
+            <span class="mad-separator wave-color-1"><img src="{% static 'cleansy_svg_icons/wave4.svg' %}" alt="" class="svg"></span>
+            <span class="mad-separator wave-color-3"><img src="{% static 'cleansy_svg_icons/wave2.svg' %}" alt="" class="svg"></span>
+          </div>
+          <div class="content-element-7">
+            <div class="mad-sub-title">Plans and Pricing</div>
+            <h2>Latest News</h2>
+          </div>
+          <div class="owl-carousel mad-entities type-3 mad-grid mad-grid--cols-3 nav-type-2">
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img1.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">23<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Donec Sit Amet Eros</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img2.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">17<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Nam Elit Agna</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img3.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">12<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Quisque Diam Lorem</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img1.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">23<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Donec Sit Amet Eros</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img2.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">17<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Nam Elit Agna</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img3.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">12<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Quisque Diam Lorem</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img1.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">23<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Donec Sit Amet Eros</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img2.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">17<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Nam Elit Agna</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+            <!-- owl item -->
+            <div class="mad-grid-item">
+              <!--================ Entity ================-->
+              <article class="mad-entity">
+                <div class="mad-entity-media">
+                  <a href="#"><img src="{% static 'images/448x296_img3.jpg' %}" alt=""></a>
+                </div>
+                <div class="mad-entity-content">
+                  <span class="mad-entity-date">12<span>OCT</span></span>
+                  <div class="mad-entity-header">
+                    <h3 class="mad-entity-title"><a href="#" class="mad-link">Quisque Diam Lorem</a></h3>
+                    <div class="mad-entity-tag">by <a href="#">Admin</a> / in <a href="#">News</a></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam
+                    leo.</p>
+                  <a href="#" class="mad-read-more">Learn More</a>
+                </div>
+              </article>
+              <!--================ End of Entity ================-->
+            </div>
+            <!-- / owl item -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mad-section pt-size-2 with-separator mad-section--stretched mad-colorizer--scheme-color-2 mad-colorizer--scheme-light">
+      <div class="mad-colorizer-bg-color"><span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves3.svg"
+            alt="" class="svg"></span></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <form class="mad-newsletter-form one-line">
+              <h5 class="mad-page-title">Sign Up For Offers <br>
+                And Promotions!</h5>
+              <input type="email" name="email" placeholder="Your email address...">
+              <button type="submit" class="btn btn-big"><i
+                  class="material-icons">mail_outline</i><span>Subscribe</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 {% endblock %}

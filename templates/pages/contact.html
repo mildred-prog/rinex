@@ -2,6 +2,155 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-  <h1>Contact</h1>
-  <p>This is the contact page.</p>
+      <div class="mad-breadcrumb with-bg with-overlay" data-bg-image-src="images/1920x500_bg1.jpg">
+        <span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves.svg" alt="" class="svg"></span>
+        <div class="container">
+          <h1 class="mad-page-title">Contact Us</h1>
+          <nav class="mad-breadcrumb-path"><span><a href="index.html">Home</a></span> / <span>Contact Us</span>
+          </nav>
+        </div>
+      </div>
+      <!--================ End of Breadcrumb ================-->
+      <div class="mad-content no-pd">
+        <div class="container">
+          <div class="mad-section">
+            <!--================ Icon Boxes ================-->
+            <div class="mad-icon-boxes our-info item-col-3">
+              <div class="mad-col">
+                <!--================ Icon Box ================-->
+                <article class="mad-icon-box">
+                  <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/location.svg" alt=""></i>
+                  <div class="mad-icon-box-content">
+                    <h4 class="mad-icon-box-title">Our Location</h4>
+                    <span class="mad-our-info-element">Cleansy, LLC <br>
+                      56 12th Ave, New York, NY 10011</span>
+                    <a href="#" class="mad-read-more small-size">Get Directions</a>
+                  </div>
+                </article>
+                <!--================ End of Icon Box ================-->
+              </div>
+              <div class="mad-col">
+                <!--================ Icon Box ================-->
+                <article class="mad-icon-box">
+                  <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/mobile_phone.svg" alt=""></i>
+                  <div class="mad-icon-box-content">
+                    <h4 class="mad-icon-box-title">Contact Us</h4>
+                    <span class="mad-our-info-element"><span>Phone:</span> +1 800 603 6035</span>
+                    <span class="mad-our-info-element"><span>Email:</span> info@cleansy.com</span>
+                  </div>
+                </article>
+                <!--================ End of Icon Box ================-->
+              </div>
+              <div class="mad-col">
+                <!--================ Icon Box ================-->
+                <article class="mad-icon-box">
+                  <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/working_hours.svg" alt=""></i>
+                  <div class="mad-icon-box-content">
+                    <h4 class="mad-icon-box-title">Hours of Operation</h4>
+                    <span class="mad-our-info-element"><span>Open 7 Days a Week:</span> 8:00AM - 7:00 PM</span>
+                    <span class="mad-our-info-element"><span>Closed on:</span> New Year's Day, Easter, <br>
+                      Thanksgiving Day, Christmas Day</span>
+                  </div>
+                </article>
+                <!--================ End of Icon Box ================-->
+              </div>
+            </div>
+            <!--================ End of Icon Boxes ================-->
+            </article>
+          </div>
+          <div class="mad-section no-pd mad-section--stretched-content-no-px">
+            <div class="g-map-wrap">
+              <div id="googleMap3" class="mad-gmap size-3"></div>
+            </div>
+          </div>
+          <div class="mad-section mad-section--stretched with-separator-bottom mad-colorizer--scheme-color-4">
+            <div class="mad-colorizer-bg-color"><span class="mad-separator wave-color-3"><img src="cleansy_svg_icons/wave2.svg"
+                  alt="" class="svg"></span>
+            </div>
+            <div class="mad-page-title-wrap align-center">
+              <h2 class="mad-page-title">Send Us a Message</h2>
+              <p class="mad-text-medium">For any detailing questions, please feel out the form and we will get back to you at <br> our earliest convenience.</p>
+            </div>
+            <form class="mad-contact-form item-col-3">
+              <div class="mad-col">
+                <label>First Name <span class="req">*</span></label>
+                <input type="text" id="cf_name" name="cf_name" placeholder="First Name">
+              </div>
+              <div class="mad-col">
+                <label>Last Name <span class="req">*</span></label>
+                <input type="text" id="cf_name" name="cf_name" placeholder="Last Name">
+              </div>
+              <div class="mad-col">
+                <label>Company <span class="req">*</span></label>
+                <input type="text" id="cf_company" name="cf_company" placeholder="Company name">
+              </div>
+              <div class="mad-col">
+                <label>Email <span class="req">*</span></label>
+                <input type="text" id="cf_email" name="cf_email" placeholder="Email address">
+              </div>
+              <div class="mad-col">
+                <label>City <span class="req">*</span></label>
+                <div class="mad-custom-select">
+                  <select data-default-text="Select a city" id="cf_city" name="cf_city">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mad-col">
+                <label>Phone <span class="req">*</span></label>
+                <input type="tel" id="cf_phone" name="cf_phone" placeholder="Phone number">
+              </div>
+              <div class="mad-col">
+                <label>Product <span class="req">*</span></label>
+                <div class="mad-custom-select">
+                  <select data-default-text="Select Product" id="cf_product" name="cf_product">
+                    <option>Bus Wash</option>
+                    <option>Truck Wash</option>
+                    <option>Train Wash</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mad-col">
+                <label>Message</label>
+                <textarea id="cf_message" name="cf_message" rows="5" placeholder="Leave your comment"></textarea>
+              </div>
+              <div class="mad-col">
+                <div class="content-element-2">
+                  <label>Captcha <span class="req">*</span></label>
+                  <input type="text">
+                </div>
+                <div class="btn-set">
+                  <div><img src="images/capcha.png" alt=""></div>
+                  <a href="#" class="mad-reload"><i class="material-icons">refresh</i> Reload</a>
+                </div>
+              </div>
+              <div class="mad-col full-width">
+                <div class="btn-set justify-content-center">
+                  <button class="btn btn-big reset" type="reset">Reset</button>
+                  <button type="submit" class="btn btn-style-2 btn-big">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="mad-section pt-size-2 with-separator mad-section--stretched mad-colorizer--scheme-color-2 mad-colorizer--scheme-light">
+        <div class="mad-colorizer-bg-color"><span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves3.svg"
+              alt="" class="svg"></span></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <form class="mad-newsletter-form one-line">
+                <h5 class="mad-page-title">Sign Up For Offers <br>
+                  And Promotions!</h5>
+                <input type="email" name="email" placeholder="Your email address...">
+                <button type="submit" class="btn btn-big"><i
+                    class="material-icons">mail_outline</i><span>Subscribe</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 {% endblock %}
