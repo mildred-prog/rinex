@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.site-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #111;
+}
+
+.container {
+  padding: 18px;
+}
