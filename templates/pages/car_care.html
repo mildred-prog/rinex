@@ -1,0 +1,546 @@
+{% extends "base.html" %}
+
+{% block title %}Car Care | Rinex Shine{% endblock %}
+
+{% block content %}
+<div class="mad-breadcrumb with-bg with-overlay" data-bg-image-src="images/1920x500_bg1.jpg">
+    <span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves.svg" alt="" class="svg"></span>
+    <div class="container">
+        <h1 class="mad-page-title">Car Care Services</h1>
+        <nav class="mad-breadcrumb-path"><span><a href="{% url 'pages:home' %}">Home</a></span> / <span>Car Care</span>
+        </nav>
+    </div>
+</div>
+
+<div class="mad-content no-pd">
+    <div class="container">
+        <div class="mad-section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-element-6">
+                        <div class="mad-sub-title">Professional Care</div>
+                        <h2>Mobile Car <br>
+                            Detailing Services</h2>
+                    </div>
+                    <p class="mad-text-medium">Professional mobile car care at your convenience. Our expert team brings
+                        premium detailing services directly to your location, ensuring your vehicle receives the highest
+                        quality care while you save time.</p>
+                    <div class="content-element-5">
+                        <div class="mad-entity-content mad-text-medium">
+                            <ul class="mad-list--icon">
+                                <li>
+                                    <div class="mad-list-title">Convenient mobile service at your location</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                                <li>
+                                    <div class="mad-list-title">Premium detailing products and techniques</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                                <li>
+                                    <div class="mad-list-title">Experienced and insured professionals</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                                <li>
+                                    <div class="mad-list-title">All vehicle sizes and types welcome</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="{% url 'pages:contact' %}" class="btn">Get Quote</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mad-img-holder">
+                        <div class="mad-img"><img src="images/982x905_img1.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mad-section with-separator-both mad-section--stretched mad-colorizer--scheme-color-4">
+            <div class="mad-colorizer-bg-color"><span class="mad-separator"><img
+                        src="cleansy_svg_icons/turquoise_blue_waves2.svg" alt="" class="svg"></span><span
+                    class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves3.svg" alt=""
+                        class="svg"></span></div>
+            <div class="content-element-3">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mad-sub-title">Car Care Services</div>
+                        <h2>Our Packages</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="mad-text-medium with-pl">Professional mobile car detailing services tailored to your
+                            vehicle's needs. From basic maintenance to premium detailing, we have the perfect package
+                            for you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mad-pricing-tables item-col-3">
+                
+                <!-- Package 1: Basic Wash -->
+                <div class="mad-col">
+                    <article class="mad-pricing-table">
+                        <div class="mad-pt-header">
+                            <h3 class="mad-pricing-table-title">Basic Wash</h3>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="mad-text-small">£25 - £35</span>
+                                </div>
+                                <div class="d-flex align-items-center" style="gap:6px;">
+                                    <i class="material-icons" style="font-size:18px;">schedule</i>
+                                    <span class="mad-text-small">Up to 45min</span>
+                                </div>
+                            </div>
+
+                            <p><b>Includes:</b> Exterior wash, wheel cleaning, window cleaning, tire shine</p>
+                            <p><b>Perfect for:</b> Regular maintenance and quick clean-ups</p>
+                        </div>
+
+                        <div class="mad-pricing-table-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="#" class="btn btn-style-2 w-100 mb-2">
+                                        <span>Full details</span>
+                                    </a>
+                                    <a href="{% url 'bookings:book_subservice' subservice_slug='basic-wash' %}" class="btn w-100">
+                                        <span>Book Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Package 2: Premium Detail -->
+                <div class="mad-col">
+                    <article class="mad-pricing-table">
+                        <div class="mad-pt-header">
+                            <h3 class="mad-pricing-table-title">Premium Detail</h3>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="mad-text-small">£60 - £85</span>
+                                </div>
+                                <div class="d-flex align-items-center" style="gap:6px;">
+                                    <i class="material-icons" style="font-size:18px;">schedule</i>
+                                    <span class="mad-text-small">Up to 90min</span>
+                                </div>
+                            </div>
+
+                            <p><b>Includes:</b> Everything in Basic plus interior vacuum, dashboard cleaning, air freshener</p>
+                            <p><b>Perfect for:</b> Monthly deep cleaning and maintenance</p>
+                        </div>
+
+                        <div class="mad-pricing-table-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="#" class="btn btn-style-2 w-100 mb-2">
+                                        <span>Full details</span>
+                                    </a>
+                                    <a href="{% url 'bookings:book_subservice' subservice_slug='premium-detail' %}" class="btn w-100">
+                                        <span>Book Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Package 3: Full Valet -->
+                <div class="mad-col">
+                    <article class="mad-pricing-table">
+                        <div class="mad-pt-header">
+                            <h3 class="mad-pricing-table-title">Full Valet</h3>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="mad-text-small">£120 - £150</span>
+                                </div>
+                                <div class="d-flex align-items-center" style="gap:6px;">
+                                    <i class="material-icons" style="font-size:18px;">schedule</i>
+                                    <span class="mad-text-small">Up to 180min</span>
+                                </div>
+                            </div>
+
+                            <p><b>Includes:</b> Everything in Premium plus wax protection, leather conditioning, engine bay cleaning</p>
+                            <p><b>Perfect for:</b> Special occasions, pre-sale preparation, complete restoration</p>
+                        </div>
+
+                        <div class="mad-pricing-table-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="#" class="btn btn-style-2 w-100 mb-2">
+                                        <span>Full details</span>
+                                    </a>
+                                    <a href="{% url 'bookings:book_subservice' subservice_slug='full-valet' %}" class="btn w-100">
+                                        <span>Book Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Availability Calendar Section -->
+        <div class="mad-section">
+            <h2 class="mad-page-title align-center">Select Your Booking Date</h2>
+            
+            {% if availability_by_date %}
+                {% if calendar_error %}
+                <div class="alert alert-info text-center">
+                    <i class="material-icons">info</i>
+                    <p>{{ calendar_error }}</p>
+                </div>
+                {% endif %}
+                
+                <div class="text-center mb-4">
+                    <p class="mad-text-medium">📅 {{ total_available_slots }} time slots available in the next 14 days</p>
+                </div>
+                
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h3 class="calendar-title">Available Dates</h3>
+                        <p class="calendar-subtitle">Click on a date to see available time slots</p>
+                    </div>
+                    
+                    <div class="calendar-grid" id="availability-calendar">
+                        {% for date_str, slots in availability_by_date.items %}
+                        <div class="calendar-day available" data-date="{{ date_str }}" data-slots="{{ slots|length }}">
+                            <div class="day-number">{{ date_str|slice:"8:10" }}</div>
+                            <div class="day-month">{{ date_str|date:"M" }}</div>
+                            <div class="day-weekday">{{ date_str|date:"D" }}</div>
+                            <div class="day-slots">{{ slots|length }} slots</div>
+                            <!-- Store slots data as JSON -->
+                            <script type="application/json" class="slots-data">
+                                [
+                                    {% for slot in slots %}
+                                    {
+                                        "start_time": "{{ slot.start_time|time:'H:i' }}",
+                                        "end_time": "{{ slot.end_time|time:'H:i' }}",
+                                        "duration_minutes": {{ slot.duration_minutes }}
+                                    }{% if not forloop.last %},{% endif %}
+                                    {% endfor %}
+                                ]
+                            </script>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="time-slots-container" id="time-slots-container" style="display: none;">
+                        <h4>Available Time Slots for <span id="selected-date"></span></h4>
+                        <div class="time-slots-grid" id="time-slots-grid">
+                            <!-- Time slots will be populated here -->
+                        </div>
+                    </div>
+                </div>
+                
+            {% elif calendar_error %}
+                <div class="alert alert-warning text-center">
+                    <i class="material-icons">warning</i>
+                    <p>{{ calendar_error }}</p>
+                </div>
+            {% else %}
+                <div class="text-center">
+                    <i class="material-icons" style="font-size: 48px; color: #999;">event_busy</i>
+                    <p class="mad-text-medium">No available slots in the next 14 days</p>
+                    <p class="mad-text-small">Please check back later or call us for special arrangements</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="mad-section">
+            <h2 class="mad-page-title align-center">Why Choose Our Car Care Services?</h2>
+            <div class="mad-icon-boxes align-center item-col-4">
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg"
+                                src="cleansy_svg_icons/contactless_washing.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Mobile <br>Service</h3>
+                            <p>We come to your location for maximum convenience</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg"
+                                src="cleansy_svg_icons/exceptional_client_service.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Expert <br>Technicians</h3>
+                            <p>Trained professionals with years of experience</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/gift_cards.svg"
+                                alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Premium <br>Products</h3>
+                            <p>Only the best detailing products and equipment</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg"
+                                src="cleansy_svg_icons/unlimited_wash_club.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Satisfaction <br>Guaranteed</h3>
+                            <p>100% satisfaction guarantee on all services</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Availability Calendar Styles */
+.calendar-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calendar-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.calendar-subtitle {
+    color: #666;
+    font-size: 14px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.calendar-day {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.calendar-day.available {
+    border-color: #00bcd4;
+    background: linear-gradient(135deg, #f0ffff, #e0f7fa);
+}
+
+.calendar-day.available:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.3);
+    border-color: #0097a7;
+}
+
+.calendar-day.selected {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    border-color: #0097a7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+}
+
+.day-number {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.day-month {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+
+.day-weekday {
+    font-size: 11px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+.day-slots {
+    font-size: 10px;
+    background: rgba(0, 188, 212, 0.2);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.calendar-day.selected .day-slots {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.time-slots-container {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.time-slots-container h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.time-slot {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+    border-color: #00bcd4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.2);
+}
+
+.slot-link {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.slot-link:hover {
+    color: #0097a7;
+}
+
+.alert {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.alert-warning {
+    color: #856404;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.alert .material-icons {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    
+    .day-number {
+        font-size: 20px;
+    }
+    
+    .time-slots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarDays = document.querySelectorAll('.calendar-day');
+    const timeSlotsContainer = document.getElementById('time-slots-container');
+    const timeSlotsGrid = document.getElementById('time-slots-grid');
+    const selectedDateSpan = document.getElementById('selected-date');
+    
+    calendarDays.forEach(day => {
+        day.addEventListener('click', function() {
+            // Remove selected class from all days
+            calendarDays.forEach(d => d.classList.remove('selected'));
+            
+            // Add selected class to clicked day
+            this.classList.add('selected');
+            
+            // Get date and slots
+            const date = this.dataset.date;
+            const slotsData = this.querySelector('.slots-data');
+            const slots = JSON.parse(slotsData.textContent);
+            
+            // Format date for display
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            // Update selected date display
+            selectedDateSpan.textContent = formattedDate;
+            
+            // Clear and populate time slots
+            timeSlotsGrid.innerHTML = '';
+            
+            slots.forEach(slot => {
+                const slotElement = document.createElement('div');
+                slotElement.className = 'time-slot';
+                const bookingUrl = "{% url 'bookings:book_subservice' subservice_slug='basic-wash' %}";
+                slotElement.innerHTML = `
+                    <a href="${bookingUrl}?date=${date}&time=${slot.start_time}" 
+                       class="slot-link">
+                        ${slot.start_time} - ${slot.end_time}
+                        <br><small>${slot.duration_minutes} min</small>
+                    </a>
+                `;
+                timeSlotsGrid.appendChild(slotElement);
+            });
+            
+            // Show time slots container
+            timeSlotsContainer.style.display = 'block';
+            
+            // Smooth scroll to time slots
+            timeSlotsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    });
+});
+
+function showFullCalendar() {
+    // This function can be implemented to show a full month view
+    alert('Full calendar view coming soon!');
+}
+</script>
+
+{% endblock %}

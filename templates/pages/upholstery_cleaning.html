@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}Upholstery Cleaning | Rinex Shine{% endblock %}
+
+{% block content %}
+<div class="mad-breadcrumb with-bg with-overlay" data-bg-image-src="images/1920x500_bg1.jpg">
+    <span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves.svg" alt="" class="svg"></span>
+    <div class="container">
+        <h1 class="mad-page-title">Upholstery & Fabric Cleaning</h1>
+        <nav class="mad-breadcrumb-path"><span><a href="{% url 'pages:home' %}">Home</a></span> / <span>Upholstery
+                Cleaning</span>
+        </nav>
+    </div>
+</div>
+
+<div class="mad-content no-pd">
+    <div class="container">
+        <div class="mad-section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-element-6">
+                        <div class="mad-sub-title">Fabric Care</div>
+                        <h2>Professional <br>
+                            Upholstery Cleaning</h2>
+                    </div>
+                    <p class="mad-text-medium">Restore your furniture and fabrics to their original beauty with our
+                        professional upholstery cleaning services. We use specialized techniques to safely and
+                        effectively clean all types of fabrics.</p>
+                    <div class="content-element-5">
+                        <div class="mad-entity-content mad-text-medium">
+                            <ul class="mad-list--icon">
+                                <li>
+                                    <div class="mad-list-title">Safe cleaning for all fabric types</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                                <li>
+                                    <div class="mad-list-title">Deep stain and odor removal</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                                <li>
+                                    <div class="mad-list-title">Quick drying time</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                                <li>
+                                    <div class="mad-list-title">Extends furniture lifespan</div><i
+                                        class="icon material-icons">check</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="{% url 'pages:contact' %}" class="btn">Get Quote</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mad-img-holder">
+                        <div class="mad-img"><img src="images/982x905_img1.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mad-section with-separator-both mad-section--stretched mad-colorizer--scheme-color-4">
+            <div class="mad-colorizer-bg-color"><span class="mad-separator"><img
+                        src="cleansy_svg_icons/turquoise_blue_waves2.svg" alt="" class="svg"></span><span
+                    class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves3.svg" alt=""
+                        class="svg"></span></div>
+            <div class="content-element-3">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mad-sub-title">Upholstery Services</div>
+                        <h2>Our Packages</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="mad-text-medium with-pl">Professional upholstery and fabric cleaning services tailored
+                            to your needs. From spot treatment to full deep cleaning, we have the perfect package for
+                            you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mad-pricing-tables item-col-3">
+                {% for subservice in subservices %}
+                <div class="mad-col">
+                    <article class="mad-pricing-table">
+
+                        <div class="mad-pt-header">
+                            <h3 class="mad-pricing-table-title">{{ subservice.name }}</h3>
+
+                            <!-- ✅ Price range + duration row (like your screenshot) -->
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    {% if subservice.min_price and subservice.max_price %}
+                                    <span class="mad-text-small">£{{ subservice.min_price }} - £{{ subservice.max_price
+                                        }}</span>
+                                    {% else %}
+                                    <span class="mad-text-small">Contact us for pricing</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="d-flex align-items-center" style="gap:6px;">
+                                    <i class="material-icons" style="font-size:18px;">schedule</i>
+                                    {% if subservice.duration_minutes %}
+                                    <span class="mad-text-small">Up to {{ subservice.duration_minutes }}min</span>
+                                    {% else %}
+                                    <span class="mad-text-small">Time varies</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            {% if subservice.short_description %}
+                            <p><b>Includes:</b> {{ subservice.short_description|safe }}</p>
+                            {% endif %}
+
+                            {% if subservice.long_description %}
+                            <p><b>Perfect for:</b> {{ subservice.long_description|truncatewords:15 }}</p>
+                            {% endif %}
+                        </div>
+
+                        <div class="mad-pricing-table-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="{% url 'services:subservice_detail' group_slug='home-cleaning' subservice_slug=subservice.slug %}"
+                                        class="btn btn-style-2 w-100 mb-2">
+                                        <span>Full details</span>
+                                    </a>
+
+                                    <a href="{% url 'bookings:book_subservice' subservice.slug %}" class="btn w-100">
+                                        <span>Book Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <p>No home cleaning services available at the moment. Please check back soon.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="mad-section">
+            <h2 class="mad-page-title align-center">Why Choose Our Upholstery Services?</h2>
+            <div class="mad-icon-boxes align-center item-col-4">
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg"
+                                src="cleansy_svg_icons/contactless_washing.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Gentle <br>Cleaning</h3>
+                            <p>Safe for all fabric types and materials</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg"
+                                src="cleansy_svg_icons/exceptional_client_service.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Stain <br>Removal</h3>
+                            <p>Effective removal of tough stains and odors</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/gift_cards.svg"
+                                alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Quick <br>Drying</h3>
+                            <p>Fast drying techniques for minimal disruption</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg"
+                                src="cleansy_svg_icons/unlimited_wash_club.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Satisfaction <br>Guaranteed</h3>
+                            <p>100% satisfaction guarantee on all services</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

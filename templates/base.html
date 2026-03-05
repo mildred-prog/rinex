@@ -61,138 +61,40 @@
           <div class="mad-header-items">
             <div class="mad-header-item">
               <a href="index.html" class="mad-logo"><img src="{% static 'images/logo.png' %}" alt=""></a>
-              <span class="mad-tel"><i class="material-icons">call</i>+1 800 559 6580</span>
+              <span class="mad-tel"><i class="material-icons">call</i>+447956450596</span>
             </div>
             <!--================ Navigation ================-->
             <nav class="mad-navigation-container">
               <ul class="mad-navigation mad-navigation--vertical-sm">
-                <li class="menu-item menu-item-has-children current-menu-item"><a href="#">Home</a>
+                <li class="current-menu-item"><a href="#">Home</a>
+        
+          
+                </li>
+                <li class="menu-item menu-item-has-children"><a href="#">Services</a>
                   <!--================ Sub Menu ================-->
                   <ul class="sub-menu">
-                    <li class="menu-item current-menu-item"><a href="index.html">Home 1 - Automative Car Wash</a>
+                    <li class="menu-item"><a href="{% url 'pages:car_care' %}">Car Care</a>
                     </li>
-                    <li class="menu-item"><a href="home_2.html">Home 2 - Hand Car Wash</a>
+                    <li class="menu-item"><a href="{% url 'pages:home_cleaning' %}">Home Cleaning</a>
                     </li>
-                    <li class="menu-item"><a href="home_3.html">Home 3 - Large Vehicle Wash</a>
+                    <li class="menu-item"><a href="{% url 'pages:office_shop_cleaning' %}">Office &amp; Shop</a></li>
+                    <li class="menu-item"><a href="{% url 'pages:move_in_out_cleaning' %}">Move In/Out</a></li>
+                    <li class="menu-item"><a href="{% url 'pages:upholstery_cleaning' %}">Upholstery</a></li>
+                    
+                      <!--================ Sub Menu ================-->
+                      <!--================ End of Sub Menu ================-->
                     </li>
-                    <li class="menu-item"><a href="home_4.html">Home 4 - Self Serve Car Wash</a>
-                    </li>
-                    <li class="menu-item"><a href="home_5.html">Home 5 - Cleaning Products Store</a>
-                    </li>
+
                   </ul>
                   <!--================ End of Sub Menu ================-->
                 </li>
-                <li class="menu-item menu-item-has-children"><a href="#">Pages</a>
+                <li class="menu-item"><a href="{% url 'pages:about' %}">About</a>
                   <!--================ Sub Menu ================-->
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="pages_about.html">About v1</a>
-                    </li>
-                    <li class="menu-item"><a href="pages_about_v2.html">About v2</a>
-                    </li>
-                    <li class="menu-item"><a href="pages_team.html">Team</a></li>
-                    <li class="menu-item"><a href="pages_services.html">Services</a></li>
-                    <li class="menu-item"><a href="pages_wash_club.html">Unlimited Wash Club</a></li>
-                    <li class="menu-item menu-item-has-children"><a href="#">Photo Gallery</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li><a href="gallery_grid.html">Grid Gallery</a>
-                        </li>
-                        <li><a href="gallery_full_width.html">Full Width Grid Gallery</a>
-                        </li>
-                        <li><a href="gallery_masonry.html">Masonry Gallery</a>
-                        </li>
-                        <li><a href="gallery_masonry_full_width.html">Full Width Masonry Gallery</a>
-                        </li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                    <li class="menu-item"><a href="pages_testimonials.html">Testimonials</a></li>
-                    <li class="menu-item"><a href="pages_pricing.html">Pricing</a></li>
-                    <li class="menu-item"><a href="pages_appointment.html">Make an Appointment</a></li>
-                    <li class="menu-item"><a href="pages_coupons.html">Digital Coupons</a></li>
-                    <li class="menu-item"><a href="pages_cards.html">Gift Cards</a></li>
-                    <li class="menu-item"><a href="pages_locations.html">Locations</a></li>
-                    <li class="menu-item"><a href="pages_contact.html">Contact</a></li>
-                    <li class="menu-item"><a href="pages_coming_soon.html">Coming Soon Page</a></li>
-                    <li class="menu-item"><a href="pages_404.html">404 Page</a></li>
-                  </ul>
-                  <!--================ End of Sub Menu ================-->
-                </li>
-                <li class="menu-item menu-item-has-children mega-menu"><a href="#">Features</a>
-                  <!--================ Sub Menu ================-->
-                  <ul class="sub-menu">
-                    <li class="menu-item menu-item-has-children"><a href="#" class="sub-title">Elements 1</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="elements_accordions_toggles.html">Accordions
-                            &amp; Toggles</a></li>
-                        <li class="menu-item"><a href="elements_alert_boxes_buttons.html">Alert Boxes
-                            &amp; Buttons</a></li>
-                        <li class="menu-item"><a href="elements_call_to_actions.html">Call to Actions</a></li>
-                        <li class="menu-item"><a href="elements_counters.html">Counters &amp; Countdowns</a></li>
-                        <li class="menu-item"><a href="elements_icon_boxes.html">Icon With Text</a></li>
-                        <li class="menu-item"><a href="elements_image_boxes.html">Image With Text</a></li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                    <li class="menu-item menu-item-has-children"><a href="#" class="sub-title no-title">Elements 2</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="elements_pricing.html">Pricing Tables</a></li>
-                        <li class="menu-item"><a href="elements_tables.html">Tables &amp; Progress Bars</a></li>
-                        <li class="menu-item"><a href="elements_tabs.html">Tabs &amp; Tour Sections</a></li>
-                        <li class="menu-item"><a href="elements_team.html">Team Members &amp; Awards</a></li>
-                        <li class="menu-item"><a href="elements_testimonials.html">Testimonials</a></li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                    <li class="menu-item menu-item-has-children"><a href="#" class="sub-title">Typography</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="elements_dropcaps_blockquotes.html">Dropcaps
-                            &amp; Blockquotes</a></li>
-                        <li class="menu-item"><a href="elements_headings_and_paragraphs.html">Headings
-                            &amp; Paragraphs</a></li>
-                        <li class="menu-item"><a href="elements_highlights_tooltips_listings.html">Highlights, Tooltips and
-                            Listings</a></li>
-                        <li class="menu-item"><a href="rtl/index.html">RTL Version</a></li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                    <li class="menu-item menu-item-has-children"><a href="#" class="sub-title">Header Layouts</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="index.html">Header v1</a></li>
-                        <li class="menu-item"><a href="home_2.html">Header v2</a></li>
-                        <li class="menu-item"><a href="home_3.html">Header v3</a></li>
-                        <li class="menu-item"><a href="home_4.html">Header v4</a></li>
-                        <li class="menu-item"><a href="home_5.html">Header v5</a></li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                    <li class="menu-item menu-item-has-children"><a href="#" class="sub-title">Footer Layouts</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="index.html">Footer v1</a></li>
-                        <li class="menu-item"><a href="home_2.html">Footer v2</a></li>
-                        <li class="menu-item"><a href="home_3.html">Footer v3</a></li>
-                        <li class="menu-item"><a href="home_4.html">Footer v4</a></li>
-                        <li class="menu-item"><a href="home_5.html">Footer v5</a></li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                  </ul>
                   <!--================ End of Sub Menu ================-->
                 </li>
                 <li class="menu-item menu-item-has-children"><a href="#">Shop</a>
                   <!--================ Sub Menu ================-->
                   <ul class="sub-menu">
-                    <li class="menu-item"><a href="shop_club.html">Car Wash Club Store</a>
-                    </li>
-                    <li class="menu-item"><a href="shop_front.html">Car Wash Products Store</a>
-                    </li>
-                    <li class="menu-item"><a href="shop_single.html">Single Product Page</a>
-                    </li>
                     <li class="menu-item"><a href="shop_cart.html">Cart</a>
                     </li>
                     <li class="menu-item"><a href="shop_checkout.html">Checkout</a>
@@ -215,26 +117,8 @@
                       </ul>
                       <!--================ End of Sub Menu ================-->
                     </li>
-                    <li class="menu-item menu-item-has-children"><a href="#">Masonry Blog</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="blog_masonry_sidebar.html">With Right Sidebar</a>
-                        </li>
-                        <li class="menu-item"><a href="blog_masonry.html">Without Sidebar</a>
-                        </li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
-                    <li class="menu-item menu-item-has-children"><a href="#">Single Blog Post</a>
-                      <!--================ Sub Menu ================-->
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="blog_single_sidebar.html">With Right Sidebar</a>
-                        </li>
-                        <li class="menu-item"><a href="blog_single.html">Without Sidebar</a>
-                        </li>
-                      </ul>
-                      <!--================ End of Sub Menu ================-->
-                    </li>
+
+
                   </ul>
                   <!--================ End of Sub Menu ================-->
                 </li>
@@ -286,9 +170,9 @@
                   </div>
                   <div class="content-element-4">
                     <ul class="mad-tt-list">
-                      <li>Phone: <span>336-676-6226</span></li>
-                      <li>Email: <a href="#" class="mad-mail">info@cleansy.com</a></li>
-                      <li><span>56 12th Ave, New York, NY 10011</span></li>
+                      <li>Phone: <span>+447956450596</span></li>
+                      <li>Email: <a href="#" class="mad-mail">rinexshine@gmail.com</a></li>
+                      <li><span>We Come To You</span></li>
                       <li><a href="#" class="mad-dir">Get Directions</a></li>
                     </ul>
                   </div>
@@ -326,7 +210,6 @@
                       <div class="col-sm-6">
                         <div class="mad-vr-list">
                           <ul>
-                            <li><a href="#" class="mad-link">Gift Cards</a></li>
                             <li><a href="#" class="mad-link">Careers</a></li>
                             <li><a href="#" class="mad-link">Blog</a></li>
                             <li><a href="#" class="mad-link">Online Store</a></li>
@@ -363,7 +246,7 @@
         </div>
       </div>
       <!--================ End of Footer row ================-->
-      <p class="copyrights">Copyright © 2021 Cleansy. All Rights Reserved.</p>
+      <p class="copyrights">Copyright © 2026 Rinex Shine. All Rights Reserved.</p>
     </footer>
     <!--================ End of Footer ================-->
   </div>

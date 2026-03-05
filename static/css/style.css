@@ -963,7 +963,7 @@
                 z-index: 22;
             }
 
-            .mad-navigation > li > a::after {
+            .mad-navigation > li.menu-item-has-children > a::after {
                 content: "arrow_drop_down";
                 font-family: 'Material Icons';
                 display: inline-block;

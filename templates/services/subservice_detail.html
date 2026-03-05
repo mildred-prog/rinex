@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mad-content no-pd">
+  <div class="container">
+    <article class="mad-section">
+
+      <h2 class="mad-title">{{ subservice.name }}</h2>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          {% if subservice.min_price and subservice.max_price %}
+            <strong>£{{ subservice.min_price }} - £{{ subservice.max_price }}</strong>
+          {% else %}
+            <strong>Contact us for pricing</strong>
+          {% endif %}
+        </div>
+
+        <div class="d-flex align-items-center" style="gap:6px;">
+          <i class="material-icons" style="font-size:18px;">schedule</i>
+          {% if subservice.duration_minutes %}
+            <strong>Up to {{ subservice.duration_minutes }}min</strong>
+          {% else %}
+            <strong>Time varies</strong>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if subservice.long_description %}
+        <p>{{ subservice.long_description }}</p>
+      {% endif %}
+
+      <div class="content-element-4"></div>
+
+      <a class="btn btn-big" href="{% url 'bookings:book_subservice' subservice.slug %}">
+        <span>Book Now</span>
+      </a>
+
+    </article>
+  </div>
+</div>
+{% endblock %}
