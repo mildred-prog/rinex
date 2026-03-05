@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Thank You - Booking Confirmed | Rinex Shine{% endblock %}
+
+{% block content %}
+<div class="mad-breadcrumb with-bg with-overlay" data-bg-image-src="images/1920x500_bg1.jpg">
+    <span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves.svg" alt="" class="svg"></span>
+    <div class="container">
+      <h1 class="mad-page-title">Thank You!</h1>
+      <nav class="mad-breadcrumb-path"><span><a href="{% url 'pages:home' %}">Home</a></span> / <span>Booking Confirmed</span>
+      </nav>
+    </div>
+</div>
+
+<div class="mad-content no-pd">
+    <div class="container">
+        <div class="mad-section">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="content-element-6">
+                        <div class="mad-sub-title">Booking Successful</div>
+                        <h2>Your Booking Has Been <br>Submitted Successfully!</h2>
+                    </div>
+                    <p class="mad-text-medium">Thank you for choosing Rinex Shine! We've received your booking request and our team will review it shortly. You'll receive a confirmation email with all the details soon.</p>
+                    
+                    <div class="content-element-5">
+                        <div class="mad-entity-content mad-text-medium">
+                            <ul class="mad-list--icon">
+                                <li><div class="mad-list-title">Booking confirmation sent to your email</div><i class="icon material-icons">check</i></li>
+                                <li><div class="mad-list-title">Our team will review your request</div><i class="icon material-icons">check</i></li>
+                                <li><div class="mad-list-title">We'll contact you to confirm details</div><i class="icon material-icons">check</i></li>
+                                <li><div class="mad-list-title">Professional service guaranteed</div><i class="icon material-icons">check</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-element-4"></div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <a href="{% url 'pages:home' %}" class="btn btn-big w-100">
+                                <span>Back to Home</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{% url 'pages:contact' %}" class="btn btn-big btn-style-2 w-100">
+                                <span>Contact Us</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mad-section with-separator-both mad-section--stretched mad-colorizer--scheme-color-4">
+            <div class="mad-colorizer-bg-color"><span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves2.svg"
+                    alt="" class="svg"></span><span class="mad-separator"><img src="cleansy_svg_icons/turquoise_blue_waves3.svg" alt="" class="svg"></span></div>
+            <div class="content-element-3">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mad-sub-title">Our Services</div>
+                        <h2>Explore More</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="mad-text-medium with-pl">Discover our full range of professional cleaning and detailing services. From home cleaning to car care, we've got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mad-icon-boxes align-center item-col-4">
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/contactless_washing.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Car <br>Care</h3>
+                            <p>Professional mobile detailing services</p>
+                            <a href="{% url 'pages:car_care' %}" class="btn btn-small">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/exceptional_client_service.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Home <br>Cleaning</h3>
+                            <p>Thorough residential cleaning services</p>
+                            <a href="{% url 'pages:home_cleaning' %}" class="btn btn-small">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/gift_cards.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Upholstery <br>Cleaning</h3>
+                            <p>Expert fabric and furniture cleaning</p>
+                            <a href="{% url 'pages:upholstery_cleaning' %}" class="btn btn-small">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="mad-col">
+                    <article class="mad-icon-box">
+                        <i class="mad-icon-box-icon"><img class="svg" src="cleansy_svg_icons/unlimited_wash_club.svg" alt=""></i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">Office & <br>Shop</h3>
+                            <p>Professional commercial cleaning</p>
+                            <a href="{% url 'pages:office_shop_cleaning' %}" class="btn btn-small">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="mad-section">
+            <h2 class="mad-page-title align-center">What Happens Next?</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="mad-icon-box">
+                        <i class="mad-icon-box-icon">
+                            <i class="material-icons" style="font-size: 48px; color: #00bcd4;">email</i>
+                        </i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">1. Email Confirmation</h3>
+                            <p>You'll receive an email with your booking details and reference number</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="mad-icon-box">
+                        <i class="mad-icon-box-icon">
+                            <i class="material-icons" style="font-size: 48px; color: #00bcd4;">phone</i>
+                        </i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">2. Team Review</h3>
+                            <p>Our professional team reviews your booking requirements</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="mad-icon-box">
+                        <i class="mad-icon-box-icon">
+                            <i class="material-icons" style="font-size: 48px; color: #00bcd4;">event_available</i>
+                        </i>
+                        <div class="mad-icon-box-content">
+                            <h3 class="mad-icon-box-title">3. Service Confirmation</h3>
+                            <p>We'll contact you to confirm the schedule and final details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mad-section text-center">
+            <div class="content-element-4"></div>
+            <h3>Need to Make Changes?</h3>
+            <p class="mad-text-medium">If you need to modify your booking or have any questions, our customer service team is here to help.</p>
+            <div class="content-element-3"></div>
+            <a href="{% url 'pages:contact' %}" class="btn btn-big">Contact Support</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
