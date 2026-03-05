@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY") or get_random_secret_key()
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "rinexshine.herokuapp.com",
+    "rinexshine-2297d4236f72.herokuapp.com",
 ]
 
 
