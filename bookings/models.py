@@ -1,6 +1,7 @@
 from django.db import models
 from services.models import SubService
 
+
 class Booking(models.Model):
     STATUS_CHOICES = [
         ("new", "New"),
@@ -9,20 +10,20 @@ class Booking(models.Model):
         ("cancelled", "Cancelled"),
     ]
 
-    subservice = models.ForeignKey(SubService, on_delete=models.PROTECT, related_name="bookings")
+    subservice = models.ForeignKey(
+        SubService,
+        on_delete=models.PROTECT,
+        related_name="bookings"
+    )
 
-    # Global fields (wireframe)
     full_name = models.CharField(max_length=120)
     email = models.EmailField()
     phone = models.CharField(max_length=30)
 
-    preferred_date = models.DateField()
-    time_window = models.CharField(
-        max_length=20,
-        choices=[("morning", "Morning"), ("afternoon", "Afternoon"), ("evening", "Evening")],
-    )
+    selected_date = models.DateField()
+    selected_start_time = models.TimeField()
+    selected_end_time = models.TimeField()
 
-    # Address (conditionally required based on subservice.requires_address)
     postcode = models.CharField(max_length=20, blank=True)
     address_line1 = models.CharField(max_length=255, blank=True)
     address_line2 = models.CharField(max_length=255, blank=True)
@@ -31,14 +32,15 @@ class Booking(models.Model):
     notes = models.TextField(blank=True)
     consent = models.BooleanField(default=False)
 
-    # Service-specific answers
     extra = models.JSONField(default=dict, blank=True)
 
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="new")
+    google_event_id = models.CharField(max_length=255, blank=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["-created_at"]
 
     def __str__(self):
-        return f"{self.full_name} - {self.subservice.name} ({self.preferred_date})"
+        return f"{self.full_name} - {self.subservice.name} ({self.selected_date} {self.selected_start_time})"
