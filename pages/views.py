@@ -19,6 +19,10 @@ def contact(request):
     return render(request, "pages/contact.html")
 
 def car_wash_service(request):
+    # Get car care subservices
+    from services.models import SubService
+    subservices = SubService.objects.filter(service_group='car-care', active=True)
+    
     # Hardcoded version with sample calendar availability
     availability = []
     calendar_error = None
@@ -84,6 +88,7 @@ def car_wash_service(request):
         calendar_error = "Sample availability shown. Set up Google Calendar for real-time availability."
     
     context = {
+        'subservices': subservices,
         'availability_by_date': availability_by_date,
         'calendar_error': calendar_error,
         'total_available_slots': sum(len(slots) for slots in availability_by_date.values()),
@@ -93,6 +98,10 @@ def car_wash_service(request):
     return render(request, "pages/car_care.html", context)
 
 def home_cleaning(request):
+    # Get home cleaning subservices
+    from services.models import SubService
+    subservices = SubService.objects.filter(service_group='home-cleaning', active=True)
+    
     # Hardcoded version with sample calendar availability
     availability = []
     calendar_error = None
@@ -158,15 +167,20 @@ def home_cleaning(request):
         calendar_error = "Sample availability shown. Set up Google Calendar for real-time availability."
     
     context = {
+        'subservices': subservices,
         'availability_by_date': availability_by_date,
         'calendar_error': calendar_error,
         'total_available_slots': sum(len(slots) for slots in availability_by_date.values()),
         'google_calendar_available': GOOGLE_CALENDAR_AVAILABLE
     }
     
-    return render(request, "pages/home_cleaning_hardcoded.html", context)
+    return render(request, "pages/home_cleaning.html", context)
 
 def upholstery_cleaning(request):
+    # Get upholstery subservices
+    from services.models import SubService
+    subservices = SubService.objects.filter(service_group='upholstery-fabric', active=True)
+    
     # Hardcoded version with sample calendar availability
     availability = []
     calendar_error = None
@@ -232,15 +246,20 @@ def upholstery_cleaning(request):
         calendar_error = "Sample availability shown. Set up Google Calendar for real-time availability."
     
     context = {
+        'subservices': subservices,
         'availability_by_date': availability_by_date,
         'calendar_error': calendar_error,
         'total_available_slots': sum(len(slots) for slots in availability_by_date.values()),
         'google_calendar_available': GOOGLE_CALENDAR_AVAILABLE
     }
     
-    return render(request, "pages/upholstery_cleaning_hardcoded.html", context)
+    return render(request, "pages/upholstery_cleaning.html", context)
 
 def office_shop_cleaning(request):
+    # Get office/shop subservices
+    from services.models import SubService
+    subservices = SubService.objects.filter(service_group='office-shop-cleaning', active=True)
+    
     # Hardcoded version with sample calendar availability
     availability = []
     calendar_error = None
@@ -306,15 +325,20 @@ def office_shop_cleaning(request):
         calendar_error = "Sample availability shown. Set up Google Calendar for real-time availability."
     
     context = {
+        'subservices': subservices,
         'availability_by_date': availability_by_date,
         'calendar_error': calendar_error,
         'total_available_slots': sum(len(slots) for slots in availability_by_date.values()),
         'google_calendar_available': GOOGLE_CALENDAR_AVAILABLE
     }
     
-    return render(request, "pages/office_shop_cleaning_hardcoded.html", context)
+    return render(request, "pages/office_shop_cleaning.html", context)
 
 def move_in_out_cleaning(request):
+    # Get move in/out subservices
+    from services.models import SubService
+    subservices = SubService.objects.filter(service_group='move-in-out', active=True)
+    
     # Hardcoded version with sample calendar availability
     availability = []
     calendar_error = None
@@ -380,10 +404,11 @@ def move_in_out_cleaning(request):
         calendar_error = "Sample availability shown. Set up Google Calendar for real-time availability."
     
     context = {
+        'subservices': subservices,
         'availability_by_date': availability_by_date,
         'calendar_error': calendar_error,
         'total_available_slots': sum(len(slots) for slots in availability_by_date.values()),
         'google_calendar_available': GOOGLE_CALENDAR_AVAILABLE
     }
     
-    return render(request, "pages/move_in_out_cleaning_hardcoded.html", context)
+    return render(request, "pages/move_in_out_cleaning.html", context)
