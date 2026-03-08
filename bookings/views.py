@@ -9,7 +9,7 @@ from .forms import (
     UpholsteryBookingForm,
 )
 
-from services.google_calendar import GoogleCalendarService
+# from services.google_calendar import GoogleCalendarService  # Temporarily disabled
 
 
 FORM_MAP = {
@@ -32,11 +32,13 @@ def book_subservice(request, subservice_slug):
     calendar_error = None
 
     try:
-        calendar_service = GoogleCalendarService()
-        availability = calendar_service.get_availability(
-            subservice=subservice,
-            days_ahead=14,
-        )
+        # Temporarily disabled Google Calendar for deployment
+        # calendar_service = GoogleCalendarService()
+        # availability = calendar_service.get_availability(
+        #     subservice=subservice,
+        #     days_ahead=14,
+        # )
+        pass
     except Exception:
         calendar_error = (
             "We could not load live availability right now. "
