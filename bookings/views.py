@@ -57,42 +57,77 @@ def book_subservice(request, subservice_slug):
     }
 
     if request.method == "POST":
-        form = form_cls(request.POST)
+        try:
+            form = form_cls(request.POST)
+            print(f"Form data: {request.POST}")
+            print(f"Form is valid: {form.is_valid()}")
 
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.subservice = subservice
+            if not form.is_valid():
+                print(f"Form errors: {form.errors}")
+                print(f"Form non-field errors: {form.non_field_errors()}")
 
-            if subservice.requires_address:
-                missing = []
-                if not booking.postcode:
-                    missing.append("postcode")
-                if not booking.address_line1:
-                    missing.append("address")
-                if not booking.city:
-                    missing.append("city")
+            if form.is_valid():
+                booking = form.save(commit=False)
+                booking.subservice = subservice
 
-                if missing:
-                    form.add_error(None, "Address details are required for this service.")
-                    return render(
-                        request,
-                        template_name,
-                        {
-                            "form": form,
-                            "subservice": subservice,
-                            "availability_by_date": availability_by_date,
-                            "calendar_error": calendar_error,
-                        },
-                    )
+                if subservice.requires_address:
+                    missing = []
+                    if not booking.postcode:
+                        missing.append("postcode")
+                    if not booking.address_line1:
+                        missing.append("address")
+                    if not booking.city:
+                        missing.append("city")
 
-            extra = {}
-            for key in form.cleaned_data:
-                if key not in form.Meta.fields:
-                    extra[key] = form.cleaned_data[key]
-            booking.extra = extra
+                    if missing:
+                        form.add_error(None, "Address details are required for this service.")
+                        return render(
+                            request,
+                            template_name,
+                            {
+                                "form": form,
+                                "subservice": subservice,
+                                "availability_by_date": availability_by_date,
+                                "calendar_error": calendar_error,
+                            },
+                        )
 
-            booking.save()
-            return redirect("bookings:thank_you")
+                extra = {}
+                for key in form.cleaned_data:
+                    if key not in form.Meta.fields:
+                        extra[key] = form.cleaned_data[key]
+                booking.extra = extra
+
+                booking.save()
+                return redirect("bookings:thank_you")
+            else:
+                return render(
+                    request,
+                    template_name,
+                    {
+                        "form": form,
+                        "subservice": subservice,
+                        "availability_by_date": availability_by_date,
+                        "calendar_error": calendar_error,
+                    },
+                )
+        except Exception as e:
+            print(f"Error in POST handling: {e}")
+            import traceback
+            traceback.print_exc()
+            # Return form with error
+            form = form_cls()
+            return render(
+                request,
+                template_name,
+                {
+                    "form": form,
+                    "subservice": subservice,
+                    "availability_by_date": availability_by_date,
+                    "calendar_error": calendar_error,
+                    "error": "An error occurred while processing your booking. Please try again.",
+                },
+            )
 
     else:
         form = form_cls()

@@ -42,6 +42,16 @@ class BaseBookingForm(forms.ModelForm):
             "notes": forms.Textarea(attrs={"class": "form-control", "rows": 4}),
             "consent": forms.CheckboxInput(attrs={"class": "form-check-input"}),
         }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Make date/time fields optional temporarily
+        if 'selected_date' in self.fields:
+            self.fields['selected_date'].required = False
+        if 'selected_start_time' in self.fields:
+            self.fields['selected_start_time'].required = False
+        if 'selected_end_time' in self.fields:
+            self.fields['selected_end_time'].required = False
 
     def clean_consent(self):
         if self.cleaned_data.get("consent") is not True:
