@@ -20,9 +20,9 @@ class Booking(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=30)
 
-    selected_date = models.DateField()
-    selected_start_time = models.TimeField()
-    selected_end_time = models.TimeField()
+    selected_date = models.DateField(null=True, blank=True)
+    selected_start_time = models.TimeField(null=True, blank=True)
+    selected_end_time = models.TimeField(null=True, blank=True)
 
     postcode = models.CharField(max_length=20, blank=True)
     address_line1 = models.CharField(max_length=255, blank=True)
