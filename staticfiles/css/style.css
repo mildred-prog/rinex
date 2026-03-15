@@ -3932,7 +3932,7 @@
 
         .mad-products .mad-product-price:not(.onsale):before,
         .mad-products .mad-product-price span:before {
-            content: '$';
+            content: '£';
             font-size: 0.875rem;
             line-height: 1.9rem;
             margin-right: 0.25rem;
@@ -5166,7 +5166,7 @@
         }
 
         .mad-pricing-table-price:before {
-            content: '$';
+            content: '£';
             display: inline-block;
             vertical-align: top;
             line-height: 1rem;
@@ -8621,7 +8621,7 @@
 
     .mad-service-price span:before,
     .mad-service-price span:after {
-        content: '$';
+        content: '£';
         font-size: 1.25rem;
         line-height: 1rem;
         vertical-align: 8px;

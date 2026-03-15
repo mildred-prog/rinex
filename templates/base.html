@@ -31,8 +31,17 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
   <!--================ Theme CSS ================-->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=3">
   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <style>
+    .mad-pricing-table-price:before,
+    .mad-products .mad-product-price:not(.onsale):before,
+    .mad-products .mad-product-price span:before,
+    .mad-service-price span:before,
+    .mad-service-price span:after {
+      content: '£' !important;
+    }
+  </style>
   <!--================ Vendor JS ================-->
 </head>
 
