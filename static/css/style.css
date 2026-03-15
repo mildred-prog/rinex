@@ -10334,7 +10334,7 @@
 
         .mad-pricing-table-price:before {
 
-            content: '$';
+            content: '£';
 
             display: inline-block;
 
